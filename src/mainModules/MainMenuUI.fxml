@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainFrame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainModules.MainMenuController">
+   <children>
+      <MenuBar prefHeight="30.0" prefWidth="804.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="diagDiseMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Diagnose Disease" />
+                  <MenuItem fx:id="closeMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Manage">
+            <items>
+              <MenuItem fx:id="mngDiseaseMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Diseases" />
+                  <MenuItem fx:id="mngSolutionsMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Solutions" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reports">
+            <items>
+              <MenuItem fx:id="viewReportsMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="View Reports List" />
+                  <MenuItem fx:id="viewGraphsMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="View Graphs" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="aboutMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="About" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane layoutX="-2.0" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="804.0">
+         <children>
+            <Button fx:id="mngDiseaseBtn" alignment="CENTER" focusTraversable="false" layoutX="64.0" layoutY="60.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="75.0" prefWidth="219.0" text="Manage Disease Information" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="mngDiseaseImv" fitHeight="60.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:icons/checklist.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="mngSolutionsBtn" alignment="CENTER" focusTraversable="false" layoutX="63.0" layoutY="184.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="75.0" prefWidth="219.0" text="Manage Solutions" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="mngSolutionsImv" fitHeight="60.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:icons/lightbulb.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="diagDiseaseBtn" alignment="CENTER" focusTraversable="false" layoutX="63.0" layoutY="305.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="75.0" prefWidth="219.0" text="Diagnose Disease" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="diagDiseImv" fitHeight="60.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:icons/glass.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="genReportBtn" alignment="CENTER" focusTraversable="false" layoutX="63.0" layoutY="428.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="75.0" prefWidth="219.0" text="Generate Report" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="genReportImv" fitHeight="60.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:icons/report.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="413.0" layoutY="343.0" prefHeight="108.0" prefWidth="275.0" text="Coconut Disease Image Scanner v.1.0" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Andale Mono" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="424.0" layoutY="451.0" prefHeight="75.0" prefWidth="253.0" text="© 2016 UP Mindanao. All Rights Reserved." textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Andale Mono" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="mainLogoImv" fitHeight="329.0" fitWidth="484.0" layoutX="372.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:icons/coconut_leaves.png" />
+               </image></ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

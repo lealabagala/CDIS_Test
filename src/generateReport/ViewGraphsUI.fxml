@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainFrame" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="generateReport.ViewGraphsController">
+   <children>
+      <MenuBar prefHeight="30.0" prefWidth="804.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="diagDiseMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Diagnose Disease" />
+                  <MenuItem fx:id="closeMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Manage">
+            <items>
+              <MenuItem fx:id="mngDiseaseMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Diseases" />
+                  <MenuItem fx:id="mngSolutionsMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Solutions" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reports">
+            <items>
+              <MenuItem fx:id="viewReportsMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="View Reports List" />
+                  <MenuItem fx:id="viewGraphsMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="View Graphs" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="aboutMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="About" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane layoutX="-2.0" layoutY="28.0" prefHeight="574.0" prefWidth="804.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="254.0" layoutY="14.0" prefHeight="38.0" prefWidth="341.0" text="View Data Graphs" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Andale Mono" size="20.0" />
+               </font>
+            </Label>
+            <TabPane fx:id="tabPane" layoutX="1.0" layoutY="67.0" prefHeight="507.0" prefWidth="804.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab fx:id="provincesTab" text="Diseases Occurences per Province">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="804.0">
+                           <children>
+                              <PieChart fx:id="pieChart" prefHeight="471.0" prefWidth="804.0" />
+                              <Label fx:id="label" layoutX="296.0" layoutY="202.0" prefHeight="71.0" prefWidth="213.0" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Andale Mono" size="20.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="provinceCbx" layoutX="14.0" layoutY="62.0" onAction="#comboBoxHandler" prefHeight="30.0" prefWidth="202.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab fx:id="totalDiseasesTab" onSelectionChanged="#bodyOptionsHandler" text="Total Disease Occurences">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BarChart fx:id="barChart" layoutY="2.0" prefHeight="471.0" prefWidth="804.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                              <Label fx:id="label1" layoutX="306.0" layoutY="212.0" prefHeight="71.0" prefWidth="213.0" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Andale Mono" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <Button fx:id="backToMainBtn" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="40.0" prefWidth="40.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:icons/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="47.0" fitWidth="39.0" layoutX="274.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:icons/piechart.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="exportBtn" layoutX="579.0" layoutY="13.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="41.0" prefWidth="212.0" text="Export Graph to PDF...">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:icons/export.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

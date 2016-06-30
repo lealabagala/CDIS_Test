@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainFrame" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainModules.DiagnoseDiseaseController">
+   <children>
+      <MenuBar prefHeight="30.0" prefWidth="804.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="diagDiseMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Diagnose Disease" />
+                  <MenuItem fx:id="closeMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Manage">
+            <items>
+              <MenuItem fx:id="mngDiseaseMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Diseases" />
+                  <MenuItem fx:id="mngSolutionsMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Solutions" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reports">
+            <items>
+              <MenuItem fx:id="viewReportsMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="View Reports List" />
+                  <MenuItem fx:id="viewGraphsMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="View Graphs" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="aboutMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="About" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane layoutX="-2.0" layoutY="28.0" prefHeight="574.0" prefWidth="804.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="14.0" prefHeight="38.0" prefWidth="341.0" text="Diagnose Disease" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Andale Mono" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="startDiagnosisBtn" layoutX="290.0" layoutY="505.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="48.0" prefWidth="225.0" text="Start Diagnosis">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:icons/eye.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="backToMainBtn" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="40.0" prefWidth="40.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:icons/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fx:id="imageView" fitHeight="436.0" fitWidth="604.0" layoutX="112.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:diagnose_disease_inst.png" />
+               </image></ImageView>
+            <ImageView fitHeight="48.0" fitWidth="54.0" layoutX="261.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:icons/glass.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

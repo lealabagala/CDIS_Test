@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="574.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="generateReport.ValidateDiagnosisController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="311.0" layoutY="42.0" prefHeight="41.0" prefWidth="236.0" text="Validate Diagnosis" textAlignment="CENTER">
+         <font>
+            <Font name="Andale Mono" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="224.0" layoutY="84.0" prefHeight="10.0" prefWidth="363.0" />
+      <Label layoutX="429.0" layoutY="144.0" prefHeight="26.0" prefWidth="148.0" text="Diagnosed Disease:">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="diseaseLbl" layoutX="581.0" layoutY="144.0" prefHeight="26.0" prefWidth="205.0" textFill="#5cc35f">
+         <font>
+            <Font name="System Font Regular" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="402.0" layoutY="134.0" orientation="VERTICAL" prefHeight="389.0" prefWidth="4.0" />
+      <ImageView fx:id="imageView" fitHeight="300.0" fitWidth="300.0" layoutX="74.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true" />
+      <MenuBar layoutX="-3.0" prefHeight="25.0" prefWidth="814.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="diagDiseMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Diagnose Disease" />
+                  <MenuItem fx:id="closeMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Manage">
+               <items>
+                  <MenuItem fx:id="mngDiseaseMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Diseases" />
+                  <MenuItem fx:id="mngSolutionsMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Solutions" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Reports">
+               <items>
+                  <MenuItem fx:id="viewReportsMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="View Reports List" />
+                  <MenuItem fx:id="viewGraphsMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="View Graphs" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="aboutMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Button fx:id="cancelBtn" layoutX="14.0" layoutY="43.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="40.0" prefWidth="40.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:icons/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="validateBtn" layoutX="489.0" layoutY="463.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="41.0" prefWidth="197.0" text="Validate Diagnosis">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:icons/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="270.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:icons/validate.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="150.0" layoutY="144.0" prefHeight="26.0" prefWidth="148.0" text="Submitted Image" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="475.0" layoutY="195.0" prefHeight="26.0" prefWidth="225.0" text="Select appropriate diagnosis:" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="diseaseLvw" layoutX="437.0" layoutY="221.0" prefHeight="239.0" prefWidth="300.0" />
+   </children>
+</AnchorPane>

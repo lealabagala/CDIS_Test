@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manageDiseaseInfo.TrainingImagesController">
+   <children>
+      <Button fx:id="addNewImgBtn" layoutX="206.0" layoutY="445.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="41.0" prefWidth="180.0" text="Add New Image">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:icons/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelBtn" layoutX="14.0" layoutY="445.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="41.0" prefWidth="180.0" text="Cancel">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:icons/cancel.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="123.0" layoutY="12.0" prefHeight="41.0" prefWidth="205.0" text="Training Images" textAlignment="CENTER">
+         <font>
+            <Font name="Andale Mono" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="19.0" layoutY="50.0" prefHeight="10.0" prefWidth="363.0" />
+      <ImageView fx:id="imageView" fitHeight="300.0" fitWidth="300.0" layoutX="51.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="previousBtn" layoutX="25.0" layoutY="168.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="159.0" prefWidth="3.0" text="&lt;" />
+      <Button fx:id="nextBtn" layoutX="351.0" layoutY="168.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="159.0" prefWidth="13.0" text="&gt;" />
+      <Label fx:id="diseaseLbl" alignment="CENTER" layoutX="19.0" layoutY="64.0" prefHeight="33.0" prefWidth="363.0" text="Disease Name">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="deleteImgBtn" layoutX="110.0" layoutY="397.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="24.0" prefWidth="180.0" text="Delete Image">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:icons/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="29.0" fitWidth="33.0" layoutX="91.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:icons/camera.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

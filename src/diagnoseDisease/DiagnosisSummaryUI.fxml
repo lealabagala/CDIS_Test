@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="574.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagnoseDisease.DiagnosisSummaryController">
+   <children>
+      <Button fx:id="submitBtn" layoutX="599.0" layoutY="513.0" mnemonicParsing="false" onAction="#buttonEventsHandler" prefHeight="41.0" prefWidth="180.0" text="Submit Report">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:icons/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="309.0" layoutY="42.0" prefHeight="41.0" prefWidth="236.0" text="View Report Summary" textAlignment="CENTER">
+         <font>
+            <Font name="Andale Mono" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="128.0" prefHeight="26.0" prefWidth="106.0" text="Client Name">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="166.0" prefHeight="26.0" prefWidth="106.0" text="Municipality">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="204.0" prefHeight="26.0" prefWidth="106.0" text="Province">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="224.0" layoutY="84.0" prefHeight="10.0" prefWidth="363.0" />
+      <Label layoutX="32.0" layoutY="244.0" prefHeight="26.0" prefWidth="106.0" text="Date/Time">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="286.0" prefHeight="26.0" prefWidth="148.0" text="Diagnosed Disease">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="municipalityLbl" layoutX="187.0" layoutY="166.0" prefHeight="26.0" prefWidth="205.0">
+         <font>
+            <Font name="System Font Regular" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="clientNameLbl" layoutX="187.0" layoutY="128.0" prefHeight="26.0" prefWidth="205.0">
+         <font>
+            <Font name="System Font Regular" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="provinceLbl" layoutX="187.0" layoutY="204.0" prefHeight="26.0" prefWidth="205.0">
+         <font>
+            <Font name="System Font Regular" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="diseaseLbl" layoutX="187.0" layoutY="286.0" prefHeight="26.0" prefWidth="205.0">
+         <font>
+            <Font name="System Font Regular" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateTimeLbl" layoutX="187.0" layoutY="244.0" prefHeight="26.0" prefWidth="205.0">
+         <font>
+            <Font name="System Font Regular" size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="402.0" layoutY="135.0" orientation="VERTICAL" prefHeight="328.0" prefWidth="8.0" />
+      <ImageView fx:id="imageView" fitHeight="300.0" fitWidth="300.0" layoutX="455.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true" />
+      <MenuBar layoutX="-3.0" prefHeight="25.0" prefWidth="814.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="diagDiseMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Diagnose Disease" />
+                  <MenuItem fx:id="closeMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Manage">
+               <items>
+                  <MenuItem fx:id="mngDiseaseMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Diseases" />
+                  <MenuItem fx:id="mngSolutionsMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="Solutions" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Reports">
+               <items>
+                  <MenuItem fx:id="viewReportsMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="View Reports List" />
+                  <MenuItem fx:id="viewGraphsMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="View Graphs" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="aboutMenu" mnemonicParsing="false" onAction="#menuOptionsHandler" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Button fx:id="startNewDiagBtn" layoutX="25.0" layoutY="513.0" mnemonicParsing="false" onAction="#buttonEventsHandler" prefHeight="51.0" prefWidth="205.0" text="Start New Diagnosis">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:icons/eye.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="backToMainBtn" layoutX="14.0" layoutY="43.0" mnemonicParsing="false" onAction="#buttonEventsHandler" prefHeight="40.0" prefWidth="40.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:icons/home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="29.0" fitWidth="38.0" layoutX="262.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:icons/view.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="32.0" layoutY="327.0" prefHeight="26.0" prefWidth="148.0" text="Solution/s">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="solutionLvw" layoutX="34.0" layoutY="359.0" prefHeight="131.0" prefWidth="355.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manageSolutions.ViewSolutionController">
+   <children>
+      <Button fx:id="cancelBtn" layoutX="110.0" layoutY="445.0" mnemonicParsing="false" onAction="#bodyOptionsHandler" prefHeight="41.0" prefWidth="180.0" text="Back">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:icons/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="117.0" layoutY="14.0" prefHeight="41.0" prefWidth="205.0" text="View Solution" textAlignment="CENTER">
+         <font>
+            <Font name="Andale Mono" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="168.0" prefHeight="26.0" prefWidth="106.0" text="Description">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="25.0" layoutY="53.0" prefHeight="10.0" prefWidth="363.0" />
+      <Label layoutX="50.0" layoutY="332.0" prefHeight="26.0" prefWidth="106.0" text="Disease/s">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="29.0" fitWidth="33.0" layoutX="94.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:icons/view.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="descriptionLbl" layoutX="167.0" layoutY="87.0" prefHeight="188.0" prefWidth="205.0" text="Description" wrapText="true">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="diseasesLbl" layoutX="167.0" layoutY="280.0" prefHeight="130.0" prefWidth="205.0" text="Diseases" wrapText="true">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
